@@ -99,4 +99,11 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
+$app->withFacades();
+
+$app->middleware([
+	\App\Http\Middleware\CorsMiddleware::class,
+]);
+$app->withEloquent();
+
 return $app;

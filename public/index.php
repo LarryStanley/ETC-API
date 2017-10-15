@@ -10,6 +10,7 @@
 | is ready to receive HTTP / Console requests from the environment.
 |
 */
+ini_set("memory_limit", "-1");
 
 $app = require __DIR__.'/../bootstrap/app.php';
 

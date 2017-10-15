@@ -14,3 +14,14 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/road', "StationController@showAllRoad");
+$router->post('/road', "StationController@recordRoad");
+$router->get('/station', "StationController@getAllStation");
+$router->get('/history', "HistoryController@getHistory");
+$router->get('/history/month', "HistoryController@getMonthHistory");
+$router->get('/history/month/station', "HistoryController@getStationMonthHistory");
+$router->get('/weather', "HistoryController@getWeatherHistory");
+$router->get('/weather/station', "HistoryController@getStationWeatherHistory");
+$router->get('/predict', "PredictController@getWeekPredict");
+$router->get('/weather_station_parse', "HistoryController@getWeatherStations");
